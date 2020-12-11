@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Finhay]" parallel="tests">
+  <parameter name="url" value="https://app.finhay.com.vn/login"/>
+  <test thread-count="3" name="Run on Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.finhay.Login">
+        <methods>
+          <include name="Login_02_Input_Password_Least_8_Char"/>
+          <include name="Login_01_Input_Incorrect_Email"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.finhay.Login -->
+    </classes>
+  </test> <!-- Run on Firefox(failed) -->
+</suite> <!-- Failed suite [Finhay] -->
